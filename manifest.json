@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Hide X.com Account Menu Button",
+  "version": "1.0",
+  "description": "Hides the 'Account menu' button on x.com.",
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*", "https://www.x.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": []
+} 
