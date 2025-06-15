@@ -1,15 +1,31 @@
-# Hide X.com Account Menu Button Chrome Extension
+# X Username Hider
 
-This Chrome extension hides the 'Account menu' button on [x.com](https://x.com).
+A Chrome extension that hides the account menu button on X.com (formerly Twitter) to reduce UI distractions.
+
+## Features
+
+- Automatically hides the "Account menu" button on X.com
+- Works with X.com's dynamic content loading (SPA behavior)
+- Lightweight with no permissions required
+- Compatible with both x.com and www.x.com
 
 ## Installation
 
-1. Download or clone this repository to your computer.
-2. Open Google Chrome and go to `chrome://extensions/`.
-3. Enable **Developer mode** (toggle in the top right).
-4. Click **Load unpacked** and select the folder containing these files.
-5. Visit [x.com](https://x.com) and the 'Account menu' button will be hidden automatically.
+1. Download or clone this repository
+2. Open Chrome and navigate to `chrome://extensions/`
+3. Enable **Developer mode** (toggle in top right)
+4. Click **Load unpacked** and select this folder
+5. Visit X.com - the account menu button will be automatically hidden
 
-## How it works
-- The extension injects a content script that hides any button with `aria-label="Account menu"` and `role="button"`.
-- It also observes the page for changes, so the button will stay hidden even if the page updates dynamically. 
+## Technical Details
+
+- Built with Chrome Extension Manifest V3
+- Uses MutationObserver to handle dynamic content changes
+- Targets elements with `aria-label="Account menu"` and `role="button"`
+- Content script runs at `document_idle` for optimal performance
+
+## Files
+
+- `manifest.json` - Extension configuration and permissions
+- `content.js` - Main content script that hides the button
+- `CLAUDE.md` - Development guidance for AI assistants
